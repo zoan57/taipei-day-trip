@@ -1,7 +1,6 @@
 import json
 from mysql.connector import Error
 from mysql.connector import pooling
-from MYSQL import MYSQLpassword
 
 try:
     connection_pool = pooling.MySQLConnectionPool(pool_name="attraction_pool",
@@ -9,7 +8,7 @@ try:
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user='debian-sys-maint',
+                                                  user='root',
                                                   password='sggHiz3iJvVyfIUL')
 
     print("Printing connection pool properties ")

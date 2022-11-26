@@ -14,7 +14,7 @@ def connection_pool():
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user='debian-sys-maint',
+                                                  user='root',
                                                   password='sggHiz3iJvVyfIUL')
 
     print("Printing connection pool properties ")
