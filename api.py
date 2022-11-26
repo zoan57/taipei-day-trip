@@ -1,7 +1,6 @@
 from flask import *
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.MYSQL import MYSQLpassword
 app=Flask(__name__)
 
 app.config["JSON_AS_ASCII"]=False
@@ -14,8 +13,8 @@ def connection_pool():
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user='root',
-                                                  password=MYSQLpassword())
+                                                  user='debian-sys-maint',
+                                                  password='sggHiz3iJvVyfIUL')
 
     print("Printing connection pool properties ")
     print("Connection Pool Name - ", connection_pool.pool_name)
