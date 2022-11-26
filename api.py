@@ -1,6 +1,7 @@
 from flask import *
 from mysql.connector import Error
 from mysql.connector import pooling
+#from data.MYSQL import MYSQLpassword
 app=Flask(__name__)
 
 app.config["JSON_AS_ASCII"]=False
@@ -177,4 +178,4 @@ def api_get_category():
             cnx.close() 
         
 
-app.run(port=3000)
+app.run(port=3000, host="0.0.0.0")
