@@ -8,7 +8,7 @@ try:
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user='root',
+                                                  user='YOUR_SYSTEM_USER',
                                                   password='sggHiz3iJvVyfIUL')
 
     print("Printing connection pool properties ")
