@@ -34,8 +34,8 @@ def connection_pool():
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user='root',
-                                                  password='Z57An1344')
+                                                  user='YOUR_SYSTEM_USER',
+                                                  password='sggHiz3iJvVyfIUL')
 
     print("Printing connection pool properties ")
     print("Connection Pool Name - ", connection_pool.pool_name)
