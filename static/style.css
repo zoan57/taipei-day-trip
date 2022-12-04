@@ -1,0 +1,379 @@
+/*------------------------------------*\
+    CONTENTS
+
+    #ALL
+    #HEADER
+    #BANNER
+    #INDEX
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    ALL
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+body {
+    font-family: 'NotoSansTC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+button {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+content {
+    font-size: 16px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/*------------------------------------*\
+HEADER
+\*------------------------------------*/
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: center;
+    width: 100vw;
+    max-width: auto;
+    background-color: #FFFFFF;
+    z-index: 9999;
+}
+
+.header-txt {
+    display: flex;
+    width: 1200px;
+    height: 54px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header-txt h2 {
+    color: #448899;
+}
+
+.header-txt span {
+    color: #666666;
+    ;
+}
+
+
+/*------------------------------------*\
+BANNER
+\*------------------------------------*/
+
+.banner {
+    display: flex;
+    max-width: auto;
+    justify-content: center;
+    align-content: center;
+    padding-top: 54px;
+    background-image: url("images/welcome.jpg");
+    background-size: cover;
+}
+
+.banner-txt {
+    width: 1200px;
+    max-width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3% 0;
+    color: white;
+    justify-content: start;
+}
+
+.indexSearch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.indexSearchBar {
+    width: 383px;
+    height: 44px;
+    border: none;
+    padding-left: 15px;
+    border-radius: 8px 0 0 8px;
+    outline-style: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.indexSearchButton {
+    width: 60px;
+    height: 46px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background: #448899;
+    align-items: center;
+    justify-items: center;
+}
+
+#searchCategoryKeyword {
+    width: 400px;
+    height: 160px;
+    margin-top: 5px;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 99;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.searchCategory {
+    display: grid;
+    width: 360px;
+    height: 160px;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 40px 40px 40px 40px;
+    text-align: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.searchCategory div {
+    width: 120px;
+    height: 40px;
+}
+
+.searchCategory div:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.category {
+    position: relative;
+}
+
+.category span {
+    position: absolute;
+    font-size: 14px;
+    left: 15px;
+    top: 10px;
+}
+
+.isClose {
+    display: none;
+}
+
+
+/*------------------------------------*\
+INDEX
+\*------------------------------------*/
+
+
+/*---Cards Setting---*/
+
+#index-display-box {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+}
+
+a:hover.cardLink {
+    cursor: default;
+}
+
+.card {
+    position: relative;
+    height: 238px;
+    margin: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    background-color: rgb(217, 217, 217);
+    color: white;
+    border: solid lightgray 2px;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 110%;
+    border-radius: 5px 5px 0% 0%;
+    z-index: 1;
+    padding-bottom: 45px;
+}
+
+.attrName {
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    bottom: 45px;
+}
+
+.cardTopTxtBar {
+    position: absolute;
+    bottom: 45px;
+    width: 270px;
+    height: 46px;
+    background-color: black;
+    opacity: 60%;
+    z-index: 2;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardBottom:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardBottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 45px;
+    width: 250px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    z-index: 5;
+}
+
+.cardBottom span {
+    color: #757575;
+    text-align: center;
+}
+
+#errDiv {
+    color: darkred;
+    font-size: 28px;
+    margin: 30px;
+}
+
+
+/*---Button Setting---*/
+
+.indexButton {
+    margin: 8px;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadMore {
+    width: calc((100% / 4));
+    padding: 30px;
+    background-color: lightgray;
+    border: none;
+    transition: all 200ms ease-in-out;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+
+.footer {
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .banner-txt {
+        width: 580px;
+    }
+    #index-display-box {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #index-display-box {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        justify-content: center;
+    }
+    #loadMore {
+        width: calc((100% /3));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner-txt {
+        width: 320px;
+    }
+    .indexSearchBar {
+        width: 183px;
+    }
+    #index-display-box {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 351px;
+        justify-content: center;
+    }
+    #searchCategoryKeyword {
+        width: 320px;
+    }
+    .searchCategory {
+        width: 288px;
+        grid-template-columns: 96px 96px 96px;
+    }
+    .searchCategory div {
+        width: 96px;
+    }
+    .card {
+        height: 233px;
+        border: solid lightgray 1px;
+    }
+    .cardTopTxtBar {
+        width: 321px;
+        height: 40px;
+    }
+    .cardBottom {
+        border: solid lightgray 1px;
+        height: 43px;
+        width: 303px;
+        padding: 0 8px;
+    }
+    #loadMore {
+        width: calc((100% / 2));
+    }
+}
