@@ -198,7 +198,7 @@ function search() {
     if (!searchInput.value) {
         removeSearch();
         document.getElementById('errDiv').style.display = 'block';
-
+        loadMore.remove();
     } else {
         fetch(urlAPIattractions + currPage + "&keyword=" + searchInput.value).then(function(response) {
             return response.json();

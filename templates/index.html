@@ -10,7 +10,7 @@
     <title>台北一日遊</title>
 </head>
 
-<body onload="getData();getCategories()">
+<body onload="getCategories();getData()">
     <!--HEADER-->
     <div class="header">
         <div class="header-txt">
@@ -34,7 +34,7 @@
                 <form autocomplete="off" onload="addCat()">
                     <div class="indexSearch">
                         <input type="text" placeholder="輸入景點名稱查詢" class="indexSearchBar" id="indexSearchBar">
-                        <button class="indexSearchButton"><img src="/images/icon_search.png" alt="" onclick="search()"></button>
+                        <button class="indexSearchButton" type="button"><img src="/images/icon_search.png" alt="" onclick="search()"></button>
                     </div>
                     <div id="searchCategoryKeyword" class="isClose">
                         <div class="searchCategory" id="searchCategory">
