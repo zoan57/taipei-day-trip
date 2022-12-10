@@ -1,0 +1,273 @@
+/*------------------------------------*\
+    ATTRACTION
+\*------------------------------------*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#attraction-container {
+    margin-top: 84px;
+    width: 1200px;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
+    text-align: justify;
+}
+
+#attr-title-txt {
+    font-weight: 700;
+}
+
+#attr-category-mrt {
+    font-weight: 400;
+}
+
+
+/* ATTRACTION TOP */
+
+.attr-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ATTRACTION IMAGES */
+
+#attr-img {
+    position: relative;
+    margin: 7px 15px;
+    width: 540px;
+    height: 406px;
+}
+
+#attr-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.img-display {
+    display: none;
+}
+
+#dot-list {
+    position: absolute;
+    text-align: center;
+    bottom: 12px;
+    left: 0px;
+    width: 540px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    border: solid 1px white;
+    background-color: white;
+    opacity: 80%;
+}
+
+.dot:hover {
+    background-color: black;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    opacity: 80%;
+    color: rgb(67, 67, 67);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev span {
+    padding-right: 8px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* ATTRACTION BOOKING INFO */
+
+.attr-booking {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    margin: 7px 15px;
+    color: #666666;
+}
+
+.attr-title {
+    line-height: 1px;
+}
+
+.attr-title span {
+    line-height: 20px;
+}
+
+.attr-reserve {
+    width: 560px;
+    height: 272px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background: #E8E8E8;
+    box-sizing: content-box;
+}
+
+.attr-date {
+    padding: 4px 0;
+}
+
+.attr-reserve span {
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.custom-radio {
+    /* hiding browser el */
+    appearance: none;
+    /* Safari support */
+    -webkit-appearance: none;
+    border: 0 solid;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+#box-shadow {
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#box-shadow:checked {
+    border: solid white;
+    background-color: #448899;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.custom-radio:focus-visible {
+    outline-offset: 0;
+}
+
+.clickDay {
+    display: inline-block;
+}
+
+#clickAfternoon {
+    display: none;
+}
+
+.attr-reserve button {
+    all: unset;
+    width: 154px;
+    height: 36px;
+    color: white;
+    background-color: #448899;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.booking-date {
+    width: 193px;
+    height: 35px;
+    border: none;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.attr-dividing {
+    margin: 30px 0;
+}
+
+
+/* ATTRACTION BOOKING INTRODUCTION */
+
+.attr-intro {
+    color: #666666;
+    font-weight: 400;
+    line-height: 23.17px;
+    margin: 20px 15px 0 15px;
+}
+
+@media (max-width: 1300px) {
+    #attraction-container {
+        width: 800px;
+    }
+    .attr-top {
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .attr-reserve {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+    #attraction-container {
+        width: 360px;
+    }
+    .attr-top {
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    /* ATTRACTION IMAGES */
+    #attr-img {
+        width: 360px;
+        height: 350px;
+    }
+    #attr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #dot-list {
+        width: 360px;
+    }
+    /* ATTRACTION BOOKING INFO */
+    .attr-booking {
+        box-sizing: content-box;
+        justify-content: center;
+    }
+    .attr-reserve {
+        width: 300px;
+        height: 270px;
+        background: #E8E8E8;
+    }
+    .attr-dividing {
+        margin: 30px 10px;
+    }
+}

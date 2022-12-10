@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/index.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="module" src="javascript/common.js"></script>
+    <script src="javascript/index.js" defer></script>
     <title>台北一日遊</title>
 </head>
 
 <body onload="getCategories();getData()">
-    <!--HEADER-->
-    <div class="header">
-        <div class="header-txt">
-            <a href="#">
-                <h2>台北一日遊</h2>
-            </a>
-            <div>
-                <a href="#"><span>預定行程</span></a>
-                <a href="#"><span>登入/註冊</span></a>
-            </div>
-        </div>
-    </div>
-
+    <!-- HEADER -->
+    <my-header></my-header>
     <!--BANNER-->
     <section class="banner">
         <div>
@@ -34,7 +26,7 @@
                 <form autocomplete="off" onload="addCat()">
                     <div class="indexSearch">
                         <input type="text" placeholder="輸入景點名稱查詢" class="indexSearchBar" id="indexSearchBar">
-                        <button class="indexSearchButton" type="button"><img src="/images/icon_search.png" alt="" onclick="search()"></button>
+                        <button class="indexSearchButton" type="button"><img src="images/icon_search.png" alt="" onclick="search()"></button>
                     </div>
                     <div id="searchCategoryKeyword" class="isClose">
                         <div class="searchCategory" id="searchCategory">
@@ -47,19 +39,18 @@
 
     <!--INDEX-->
     <!-- insert JavaScript reactions-->
-    <div id="index-display-box"></div>
-    <div id="errDiv" style="display: none;">
-        <span class="errMsg">您所查找的資料不存在</span>
-    </div>
+    <section style="flex:1">
+        <div id="index-display-box"></div>
+        <div id="errDiv" style="display: none;">
+            <span class="errMsg">您所查找的資料不存在</span>
+        </div>
 
-    <div class="indexButton">
-        <button id="loadMore">Load More...</button>
-    </div>
-
-    <!--FOOTER-->
-    <div class="footer">
-        <span>COPYRIGHT © 台北一日遊</span>
-    </div>
+        <div class="indexButton">
+            <button id="loadMore">Load More...</button>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <my-footer></my-footer>
 
 
 </body>
