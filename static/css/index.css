@@ -1,89 +1,4 @@
 /*------------------------------------*\
-    CONTENTS
-
-    #ALL
-    #HEADER
-    #BANNER
-    #INDEX
-\*------------------------------------*/
-
-
-/*------------------------------------*\
-    ALL
-\*------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-body {
-    font-family: 'NotoSansTC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
-}
-
-h1 {
-    font-weight: 700;
-    font-size: 28px;
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-button {
-    font-size: 19px;
-    font-weight: 400;
-}
-
-content {
-    font-size: 16px;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-
-/*------------------------------------*\
-HEADER
-\*------------------------------------*/
-
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    justify-content: center;
-    width: 100vw;
-    max-width: auto;
-    background-color: #FFFFFF;
-    z-index: 9999;
-}
-
-.header-txt {
-    display: flex;
-    width: 1200px;
-    height: 54px;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-
-.header-txt h2 {
-    color: #448899;
-}
-
-.header-txt span {
-    color: #666666;
-    ;
-}
-
-
-/*------------------------------------*\
 BANNER
 \*------------------------------------*/
 
@@ -92,8 +7,8 @@ BANNER
     max-width: auto;
     justify-content: center;
     align-content: center;
-    padding-top: 54px;
-    background-image: url("images/welcome.jpg");
+    margin-top: 54px;
+    background-image: url("../images/welcome.jpg");
     background-size: cover;
 }
 
@@ -254,15 +169,24 @@ a:hover.cardLink {
     display: flex;
     flex-wrap: wrap;
     height: 45px;
-    width: 250px;
+    width: 270px;
     background-color: white;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8px;
+    padding: 0;
     z-index: 5;
 }
 
-.cardBottom span {
+.mrtTxt {
+    position: absolute;
+    left: 10px;
+    color: #757575;
+    text-align: center;
+}
+
+.categoryTxt {
+    position: absolute;
+    right: 10px;
     color: #757575;
     text-align: center;
 }
@@ -301,7 +225,7 @@ a:hover.cardLink {
 FOOTER
 \*------------------------------------*/
 
-.footer {
+footer {
     width: 100%;
     height: 104px;
     display: flex;
@@ -312,7 +236,7 @@ FOOTER
     color: white;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .banner-txt {
         width: 580px;
     }
@@ -370,8 +294,8 @@ FOOTER
     .cardBottom {
         border: solid lightgray 1px;
         height: 43px;
-        width: 303px;
-        padding: 0 8px;
+        width: 321px;
+        padding: 0;
     }
     #loadMore {
         width: calc((100% / 2));

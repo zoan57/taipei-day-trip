@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/attraction.css">
+    <script src="/javascript/attraction.js" defer></script>
+    <script type="module" src="/javascript/common.js"></script>
+    <title>台北一日遊景點介紹</title>
+</head>
+
+<body onload="fnBrowserDetect()">
+    <!-- HEADER -->
+    <my-header></my-header>
+    <main style="flex:1">
+        <section id="attraction-container">
+            <div class="attr-top">
+                <!--Fetch Data-->
+                <div id="attr-img">
+                    <div id="dot-list">
+                    </div>
+                    <a class="prev" id="prev">❮</a>
+                    <a class="next" id="next">❯</a>
+
+                </div>
+                <div class="attr-booking">
+                    <div class="attr-title">
+                        <h3 id="attr-name"></h3>
+                        <span id="attr-category-mrt"></span>
+                    </div>
+                    <div class="attr-reserve">
+                        <span id="attr-title-txt">訂購導覽行程</span><br>
+                        <span>以此景點為中心的一日行程，帶您探索城市角落故事</span><br>
+                        <span id="attr-title-txt">選擇日期：</span>
+                        <div id="date-time">
+                            <input class="booking-date" type="date" placeholder="yyyy-mm-dd">
+                        </div>
+                        <br>
+                        <span id="attr-title-txt">選擇時間：</span>
+                        <label for="box-shadow" class="date-checkbox day">
+                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" checked>
+                            上半天
+                        </label>
+                        <label for="box-shadow" class="date-checkbox afternoon">
+                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" >
+                            下半天
+                        </label>
+                        <br>
+                        <span id="attr-title-txt">導覽費用：</span>
+                        <span id="clickDay">新台幣 2000 元</span>
+                        <span id="clickAfternoon">新台幣 2500 元</span>
+                        <br>
+                        <button class="btn">開始預約行程</button>
+                    </div>
+                </div>
+            </div>
+            <!--Onload block-->
+            <div class="attr-dividing">
+                <hr>
+            </div>
+            <!--Fetch Data-->
+            <div class="attr-intro">
+                <p id="attr-intro">平安鐘祈求大家的平安，這是為了紀念921地震週年的設計，在喧鬧的廣場上每個小時鳴鐘，保佑平安，祈禱臺灣不會再發生這樣的天災。雙手合十加上108個黃色的琉璃乳丁，隨著緩緩流下的水，在底下的一個小噴泉噴出。雙手合十的意義，一個是祈福，一個是包容，教我們要包容這樣的改變，撫平這樣的傷口。下面的水緩緩流出，代表著人的生命力是不斷地延續下去。緩緩地鐘聲，卻帶來心中的寧靜。 這個平安鐘是由建築師姚仁喜與琉璃創作家王俠軍共同設計，長6公尺、寬5公尺，以鑄銅製成，由法鼓山文教基金會全額出資。平安鐘點綴都市景觀，不時提醒大家，面對刻骨銘心的災難痛苦，更應該有謙卑的一顆心。</p>
+                <div>
+                    <span id="attr-title-txt">景點地址：</span><br>
+                    <span id="attr-addr">臺北市 大安區忠孝東路4段</span>
+                </div><br>
+                <div>
+                    <span id="attr-title-txt">交通方式：</span><br>
+                    <span id="attr-transport">捷運站名：忠孝復興站4號出口1.公車：204、212、212直、232、232副、262、262(區間)、278、299、521、605、605(副)、605(新台五線)、667、903、忠孝新幹線至頂好市場站 2.車位：太平洋崇光百貨地下停車場或市民大道附近地下停車場</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <my-footer></my-footer>
+</body>
+
+</html>

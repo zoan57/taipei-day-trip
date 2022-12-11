@@ -76,6 +76,7 @@ function getData() {
             category = output[i]["category"];
             image = output[i]["images"][0];
             mrt = output[i]["mrt"];
+            id = output[i]["id"];
             let displayBox = document.getElementById('index-display-box');
 
             function add() {
@@ -83,7 +84,7 @@ function getData() {
                 // Add Card Top
                 let cardLink = document.createElement('a');
                 cardLink.classList.add('cardLink');
-                cardLink.href = '#';
+                cardLink.href = '/attraction/' + id;
                 let card = document.createElement('div');
                 card.classList.add('card');
                 let cardImg = document.createElement('img');
@@ -101,8 +102,10 @@ function getData() {
                 cardBottom.classList.add('cardBottom');
                 let txtMrt = document.createElement('span');
                 txtMrt.textContent = mrt;
+                txtMrt.classList.add('mrtTxt');
                 let txtCategory = document.createElement('span');
                 txtCategory.textContent = category;
+                txtCategory.classList.add('categoryTxt');
                 cardBottom.appendChild(txtMrt);
                 cardBottom.appendChild(txtCategory);
                 // Append all card elements
@@ -116,7 +119,7 @@ function getData() {
 }
 
 // Load More setting by IntersectionObserver
-const footerObs = document.querySelector('.footer');
+const footerObs = document.querySelector('footer');
 const loadMore = document.getElementById('loadMore');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -135,6 +138,7 @@ const observer = new IntersectionObserver((entries) => {
                     category = output[i]["category"];
                     image = output[i]["images"][0];
                     mrt = output[i]["mrt"];
+                    id = output[i]["id"]
                     let displayBox = document.getElementById('index-display-box');
 
                     function add() {
@@ -142,7 +146,7 @@ const observer = new IntersectionObserver((entries) => {
                         // Add Card Top
                         let cardLink = document.createElement('a');
                         cardLink.classList.add('cardLink');
-                        cardLink.href = '#';
+                        cardLink.href = '/attraction/' + id;
                         let card = document.createElement('div');
                         card.classList.add('card');
                         let cardImg = document.createElement('img');
@@ -160,8 +164,10 @@ const observer = new IntersectionObserver((entries) => {
                         cardBottom.classList.add('cardBottom');
                         let txtMrt = document.createElement('span');
                         txtMrt.textContent = mrt;
+                        txtMrt.classList.add('mrtTxt');
                         let txtCategory = document.createElement('span');
                         txtCategory.textContent = category;
+                        txtCategory.classList.add('categoryTxt');
                         cardBottom.appendChild(txtMrt);
                         cardBottom.appendChild(txtCategory);
                         // Append all card elements
@@ -216,6 +222,7 @@ function search() {
                     category = output[i]["category"];
                     image = output[i]["images"][0];
                     mrt = output[i]["mrt"];
+                    id = output[i]["id"];
                     let displayBox = document.getElementById('index-display-box');
 
                     function add() {
@@ -223,7 +230,7 @@ function search() {
                         // Add Card Top
                         let cardLink = document.createElement('a');
                         cardLink.classList.add('cardLink');
-                        cardLink.href = '#';
+                        cardLink.href = '/attraction/' + id;
                         let card = document.createElement('div');
                         card.classList.add('card');
                         let cardImg = document.createElement('img');
@@ -241,8 +248,10 @@ function search() {
                         cardBottom.classList.add('cardBottom');
                         let txtMrt = document.createElement('span');
                         txtMrt.textContent = mrt;
+                        txtMrt.classList.add('mrtTxt');
                         let txtCategory = document.createElement('span');
                         txtCategory.textContent = category;
+                        txtCategory.classList.add('categoryTxt');
                         cardBottom.appendChild(txtMrt);
                         cardBottom.appendChild(txtCategory);
                         // Append all card elements
@@ -253,7 +262,11 @@ function search() {
                     add();
                 }
                 nextPage = data['nextPage'];
-                if (nextPage == null) { loadMore.remove(); }
+                if (nextPage == null) { loadMore.remove(); } else if (
+                    nextPage > 0) {
+                    const indexButton = document.querySelector('.indexButton');
+                    indexButton.append(loadMore);
+                }
             }
         })
     }

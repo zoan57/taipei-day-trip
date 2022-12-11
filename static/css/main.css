@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    ALL
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+body {
+    font-family: 'NotoSansTC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+button {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+content {
+    font-size: 16px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+input,
+span,
+label {
+    cursor: default;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*------------------------------------*\
+HEADER
+\*------------------------------------*/
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: center;
+    width: 100vw;
+    max-width: auto;
+    background-color: #FFFFFF;
+    z-index: 9999;
+}
+
+.header-txt {
+    display: flex;
+    width: 1200px;
+    height: 54px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header-txt h2 {
+    color: #448899;
+}
+
+.header-txt span {
+    color: #666666;
+    ;
+}
+
+
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+
+footer {
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 0 10px;
+    }
+}
