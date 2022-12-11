@@ -196,11 +196,43 @@ main {
     font-weight: 400;
 }
 
+#date-time {
+    display: inline-block;
+    position: relative;
+    width: 193px;
+    height: 35px;
+    margin: 10px 0;
+}
+
+
+/* Change Calendar Icon In Chrome */
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Change Calendar Icon In Safari */
+
+#date-time img {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
 .booking-date {
     width: 193px;
     height: 35px;
     border: none;
-    margin: 10px 0;
     background-color: white;
 }
 

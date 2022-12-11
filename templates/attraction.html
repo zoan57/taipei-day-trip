@@ -12,7 +12,7 @@
     <title>台北一日遊景點介紹</title>
 </head>
 
-<body>
+<body onload="fnBrowserDetect()">
     <!-- HEADER -->
     <my-header></my-header>
     <main style="flex:1">
@@ -35,10 +35,13 @@
                         <span id="attr-title-txt">訂購導覽行程</span><br>
                         <span>以此景點為中心的一日行程，帶您探索城市角落故事</span><br>
                         <span id="attr-title-txt">選擇日期：</span>
-                        <input class="booking-date" type="datetime-local" name="partydate" min="2022-06-01T08:30" max="2023-06-30T16:30"><br>
+                        <div id="date-time">
+                            <input class="booking-date" type="date" placeholder="yyyy-mm-dd">
+                        </div>
+                        <br>
                         <span id="attr-title-txt">選擇時間：</span>
                         <label for="box-shadow" class="date-checkbox day">
-                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" checked >
+                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" checked>
                             上半天
                         </label>
                         <label for="box-shadow" class="date-checkbox afternoon">

@@ -37,6 +37,7 @@ fetch(attractionAPIUrl).then((response) => {
     const dots = document.querySelectorAll('.dot');
     displayImg[0].style.display = 'block';
     dots[0].style.backgroundColor = "black";
+    console.log(window.location.protocol)
 });
 
 //Attraction Images Slideshow Setting
@@ -81,7 +82,6 @@ next.addEventListener('click', () => {
 
 })
 
-
 //Switch Reservation Day/Afternoon
 document.querySelector('.day').addEventListener("click", () => {
     document.getElementById('clickDay').style.display = 'inline-block';
@@ -91,3 +91,27 @@ document.querySelector('.afternoon').addEventListener("click", () => {
     document.getElementById('clickDay').style.display = 'none';
     document.getElementById('clickAfternoon').style.display = 'inline-block';
 });
+
+//Insert Calendar Icon for Date on Safari
+function fnBrowserDetect() {
+    let userAgent = navigator.userAgent;
+    let browserName;
+    if (userAgent.match(/chrome|chromium|crios/i)) {
+        browserName = "chrome";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+        browserName = "firefox";
+    } else if (userAgent.match(/safari/i)) {
+        browserName = "safari";
+        const date = document.getElementById('date-time');
+        const dateIcon = document.createElement('img');
+        dateIcon.src = '/images/icon_calendar.png';
+        date.appendChild(dateIcon);
+    } else if (userAgent.match(/opr\//i)) {
+        browserName = "opera";
+    } else if (userAgent.match(/edg/i)) {
+        browserName = "edge";
+    } else {
+        browserName = "No browser detection";
+    }
+
+}
