@@ -1,7 +1,6 @@
 from flask import *
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.MYSQL import *
 from data.EC2MySQL import *
 
 attraction=Blueprint("attraction", __name__)

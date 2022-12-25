@@ -3,7 +3,6 @@ from flask import *
 from flask_bcrypt import Bcrypt
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.MYSQL import MySQLpassword, MyUser
 from data.EC2MySQL import *
 from api.model import *
 import os, jwt
