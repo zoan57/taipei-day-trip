@@ -102,7 +102,8 @@ label {
     color: #666666;
 }
 
-#btnTurnOff::after {
+#loginTurnOff::after,
+#registerTurnOff::after {
     position: absolute;
     right: 17px;
     top: 10px;
