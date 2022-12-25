@@ -56,7 +56,7 @@ registerBtn.addEventListener("click", () => {
         } else {
             registerWarning.textContent = "註冊失敗，重複的 Email 或其他原因";
             registerWarning.style.display = "block";
-            setTimeout(() => { registerWarning.style.display = "none" }, 1000)
+            setTimeout(() => { registerWarning.style.display = "none" }, 5000)
         }
 
     }
