@@ -5,10 +5,10 @@ def validate(data, regex):
 
 def validate_email(email: str):
     """Email Validator"""
-    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-    return validate(email, regex)
+    reg = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,10}\b'
+    return validate(email, reg)
 
 def validate_password(password: str):
     """Password Validator"""
-    reg = r"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    reg = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
     return validate(password, reg)

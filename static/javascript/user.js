@@ -1,7 +1,8 @@
 const loginBtn = document.getElementById("loginBtn");
 const registerBtn = document.getElementById("registerBtn");
 
-loginBtn.addEventListener("click", () => {
+document.addEventListener("submit", (e) => {
+    e.preventDefault();
     const loginEmail = document.getElementsByName("loginEmail");
     const loginPwd = document.getElementsByName("loginPwd");
     const loginWarning = document.getElementById("loginWarning");
@@ -9,7 +10,6 @@ loginBtn.addEventListener("click", () => {
         "email": loginEmail[0].value,
         "password": loginPwd[0].value
     };
-    console.log(loginInfo);
     async function login() {
         const fetchLogin = await fetch("/api/user/auth", {
             method: "PUT",
@@ -30,7 +30,8 @@ loginBtn.addEventListener("click", () => {
     }
     login();
 });
-registerBtn.addEventListener("click", () => {
+document.addEventListener("submit", (e) => {
+    e.preventDefault();
     const registerEmail = document.getElementsByName("registerEmail");
     const registerPwd = document.getElementsByName("registerPwd");
     const name = document.getElementsByName("name");
@@ -40,7 +41,6 @@ registerBtn.addEventListener("click", () => {
         "email": registerEmail[0].value,
         "password": registerPwd[0].value
     };
-    console.log(registerInfo);
     async function register() {
         const fetchRegister = await fetch("/api/user", {
             method: "POST",
