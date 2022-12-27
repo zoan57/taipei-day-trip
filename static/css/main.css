@@ -51,6 +51,110 @@ label {
     box-sizing: border-box;
 }
 
+#login,
+#register {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#loginCard,
+#registerCard {
+    position: absolute;
+    border-radius: 5px;
+    border-top: 10px solid transparent;
+    background: linear-gradient(white, white)padding-box, linear-gradient(to right, #66AABB, #448899)border-box;
+    overflow: hidden;
+    top: 220px;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.loginFrame {
+    width: 340px;
+    height: 275px;
+}
+
+.registerFrame {
+    width: 340px;
+    height: 332px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.userInfo h3 {
+    line-height: 0;
+    color: #666666;
+}
+
+#loginTurnOff::after,
+#registerTurnOff::after {
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    content: ' \2573';
+    width: 16px;
+    height: 16px;
+}
+
+.userInfo span {
+    color: #666666;
+}
+
+.userInfoCheck {
+    width: 310px;
+    height: 47px;
+    border-radius: 5px;
+    margin: 0 0 15px 15px;
+    padding: 15px;
+    border: solid lightgray 1px;
+}
+
+#loginBtn,
+#registerBtn {
+    all: unset;
+    background-color: #448899;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    text-align: center;
+    width: 310px;
+    height: 47px;
+    margin: 0 0 10px 15px;
+    font-size: 16px;
+}
+
+#to_login,
+#to_register {
+    text-decoration: underline;
+}
+
+#loginWarning,
+#registerWarning {
+    font-size: 14px;
+    line-height: 1;
+    color: darkred;
+}
+
+#logOut {
+    display: none;
+}
+
 
 /*------------------------------------*\
 HEADER
@@ -82,7 +186,6 @@ HEADER
 
 .header-txt span {
     color: #666666;
-    ;
 }
 
 
