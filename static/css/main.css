@@ -41,10 +41,15 @@ a:link {
     text-decoration: none;
 }
 
-input,
 span,
 label {
     cursor: default;
+}
+
+a,
+button,
+input {
+    cursor: pointer;
 }
 
 * {

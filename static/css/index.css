@@ -46,6 +46,7 @@ BANNER
     background: #448899;
     align-items: center;
     justify-items: center;
+    cursor: pointer;
 }
 
 #searchCategoryKeyword {
