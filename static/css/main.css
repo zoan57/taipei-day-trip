@@ -41,8 +41,7 @@ a:link {
     text-decoration: none;
 }
 
-span,
-label {
+body {
     cursor: default;
 }
 
@@ -123,6 +122,7 @@ input {
     content: ' \2573';
     width: 16px;
     height: 16px;
+    cursor: pointer;
 }
 
 .userInfo span {
@@ -220,6 +220,12 @@ footer {
     color: white;
 }
 
+.noneBookingFooter {
+    height: 865px;
+    align-items: flex-start;
+    padding-top: 45px;
+}
+
 @media screen and (max-width: 900px) {
     .header {
         padding: 0 10px;
@@ -229,5 +235,8 @@ footer {
 @media screen and (max-width: 600px) {
     .header {
         padding: 0 10px;
+    }
+    .noneBookingFooter {
+        height: 425px;
     }
 }

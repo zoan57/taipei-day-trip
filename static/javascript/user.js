@@ -79,7 +79,8 @@ window.addEventListener("load", () => {
         if (fetchCheck.data != null) {
             loginBar.style.display = "none";
             logOut.style.display = "inline-block";
-            console.log("User logs in now!")
+            console.log("User logs in now!");
+            console.log(fetchCheck.data['email']);
         };
 
     }
@@ -108,6 +109,7 @@ logOut.addEventListener("click", () => {
             });
             loginBar.style.display = "inline-block";
             logOut.style.display = "none";
+            window.location.href = "/"
             console.log("User logs out now!")
         };
 

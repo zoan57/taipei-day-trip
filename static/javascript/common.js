@@ -55,6 +55,8 @@ const registerCard = document.getElementById("registerCard");
 const to_register = document.getElementById("to_register");
 const to_login = document.getElementById("to_login");
 const btnTurnOff = document.getElementById("btnTurnOff");
+const bookingBar = document.getElementById("bookingBar");
+
 loginBar.addEventListener("click", () => {
     login.style.display = "block";
 })
@@ -85,14 +87,33 @@ registerTurnOff.addEventListener("click", (event) => {
     login.style.display = "none";
 })
 
-
+// Verify login status when click '預定行程'
+bookingBar.addEventListener("click", () => {
+    async function statusCheck() {
+        const fetchCheck = await fetch("/api/user/auth", {
+            method: "GET",
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(function(response) {
+            return response.json()
+        });
+        if (fetchCheck.data == null) {
+            login.style.display = "block";
+        } else if (fetchCheck.data['email'] != null) {
+            window.location.href = "/booking"
+        }
+    }
+    statusCheck();
+})
 
 // FOOTER
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <!--FOOTER-->
-        <footer>
+        <footer id="footer">
             <span>COPYRIGHT © 台北一日遊</span>
         </footer>`
     }

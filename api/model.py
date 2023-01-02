@@ -1,6 +1,8 @@
 import re, jwt, os
 from flask import request
-SECRET_KEY = os.environ.get('SECRET_KEY') or 'this is a secret'
+from dotenv import load_dotenv
+load_dotenv()
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 def validate(data, regex):
     """Custom Validator"""

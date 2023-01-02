@@ -8,6 +8,10 @@ from data.EC2MySQL import *
 from api.model import *
 import os, jwt
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+load_dotenv()
+SECRET_KEY = os.getenv('SECRET_KEY')
+
 user=Blueprint("user", __name__)
 app=Flask(__name__)
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
@@ -15,7 +19,6 @@ app.config['JWT_COOKIE_CSRF_PROTECT'] = True
 app.config['JWT_CSRF_CHECK_FORM'] = True
 load_dotenv()
 
-SECRET_KEY = os.urandom(12).hex()
 bcrypt=Bcrypt()
 
 

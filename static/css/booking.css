@@ -21,10 +21,11 @@ main {
 }
 
 .bookingTitle,
-#bookingGreeting {
+#bookingGreeting h2 {
     font-size: 19px;
     margin-bottom: 24px;
     font-weight: 700;
+    display: inline;
 }
 
 .bold {
