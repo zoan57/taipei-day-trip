@@ -45,7 +45,7 @@ window.addEventListener("submit", (e) => {
                 attrTime = 'morning';
                 attrPrice = 2000
             } else {
-                attrTimeCheck = 'afternoon';
+                attrTime = 'afternoon';
                 attrPrice = 2500
             };
             const addBooking = {
@@ -125,6 +125,10 @@ function getBookingInfo() {
             const bookingPrice = document.getElementById("bookingPrice");
             if (fetchBookingInfo.data['price'] == 2000) { bookingPrice.textContent = '新台幣 2000 元' } else {
                 bookingPrice.textContent = '新台幣 2500 元'
+            };
+            const bookingTotalPrice = document.getElementById("bookingTotalPrice");
+            if (fetchBookingInfo.data['price'] == 2000) { bookingTotalPrice.textContent = '新台幣 2000 元' } else {
+                bookingTotalPrice.textContent = '新台幣 2500 元'
             };
 
             const bookingAddress = document.getElementById("bookingAddress");

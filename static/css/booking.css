@@ -119,7 +119,7 @@ main {
     width: 30px;
     height: 30px;
     top: 0;
-    right: 110px;
+    right: 100px;
 }
 
 #deleteBtn {
@@ -168,7 +168,8 @@ main {
         position: absolute;
         width: 30px;
         height: 30px;
-        top: 435px;
-        right: 10px;
+        top: auto;
+        bottom: -30px;
+        right: 0;
     }
 }
