@@ -131,6 +131,10 @@ main {
     .bookingContainer {
         width: 900px;
     }
+    .toBook {
+        width: 900px;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 900px) {
@@ -157,12 +161,8 @@ main {
         height: 256px;
     }
     .toBook {
-        display: flex;
-        flex-direction: column;
         width: 340px;
-        margin-top: 43px;
         padding-right: 0;
-        align-items: flex-end;
     }
     .deleteIcon {
         position: absolute;
