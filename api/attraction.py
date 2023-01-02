@@ -2,7 +2,6 @@ import os
 from flask import *
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.EC2MySQL import *
 from dotenv import load_dotenv
 load_dotenv()
 

@@ -1,10 +1,8 @@
 import datetime, os, jwt
-from dotenv import load_dotenv
 from flask import *
 from flask_bcrypt import Bcrypt
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.EC2MySQL import *
 from api.model import *
 from datetime import datetime, timedelta
 from dotenv import load_dotenv

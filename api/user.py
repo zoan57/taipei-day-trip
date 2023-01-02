@@ -1,5 +1,4 @@
 import datetime
-from dotenv import load_dotenv
 from flask import *
 from flask_bcrypt import Bcrypt
 from mysql.connector import Error
