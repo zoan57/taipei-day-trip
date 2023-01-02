@@ -8,10 +8,11 @@ class Header extends HTMLElement {
                 <a href="/">
                     <h2>台北一日遊</h2>
                 </a>
-            <nav>
-                <a href="#" id="bookingBar"><span>預定行程</span></a>
-                <a href="#" id="loginBar"><span>登入/註冊</span></a>
-                <span id="logOut">登出系統</span>
+                <nav>
+                    <span id="bookingBar">預定行程</span>
+                    <span id="loginBar">登入/註冊</span>
+                    <span id="logOut">登出系統</span>
+                </nav>
             </nav>
         </header>
         <div id="login">

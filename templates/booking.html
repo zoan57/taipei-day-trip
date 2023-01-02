@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/booking.css">
+    <script src="/javascript/booking.js" defer></script>
+    <script type="module" src="/javascript/common.js"></script>
+    <script src="../javascript/user.js" defer></script>
+    <title>確認台北一日遊預定行程</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <my-header></my-header>
+
+    <main style="flex: 1;">
+        <section class="bookingContainer">
+            <div id="bookingGreeting">
+                <span>您好，</span> XXX
+                <span>，待預定的行程如下：</span>
+            </div>
+            <div class="contentMargin">
+                <div class="bookingAttr">
+                    <div class="attrImg">
+                        <img src="https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000340.jpg" alt="">
+                    </div>
+                    <div class="attrTxt">
+                        <span class="attrTitle">台北一日遊：平安鐘</span>
+                        <div class="attrContent">
+                            <span>日期：</span>
+                            <span id="bookingDate" class="attrInfo">2021-04-23</span>
+                            <br>
+                            <span>時間：</span>
+                            <span id="bookingTime" class="attrInfo">早上 9 點到下午 4 點</span>
+                            <br>
+                            <span>費用：</span>
+                            <span id="bookingPrice" class="attrInfo">新台幣 2000 元</span>
+                            <br>
+                            <span>地點：</span>
+                            <span id="bookingAddress" class="attrInfo">臺北市 大安區忠孝東路4段</span>
+
+                        </div>
+                    </div>
+                    <button id="deleteBtn">
+                        <img src="images/icon_delete.png" alt="" class="deleteIcon" >
+                    </button>
+
+                </div>
+            </div>
+            <hr>
+            <div class="contentMargin">
+                <div class="bookingInfo">
+                    <div class="bookingTitle">您的聯絡資訊</div>
+                    <div class="contact">
+                        <div><span>聯絡姓名：</span><input type="text" class="input"></div><br>
+                        <div><span>連絡信箱：</span><input type="email" class="input"></div><br>
+                        <div><span>手機號碼：</span><input type="text" class="input"></div><br>
+                    </div>
+                </div>
+                <div class="bold">
+                    <span>請保持手機暢通，準時到達，導覽人員將用手機與您聯繫，務必留下正確的聯絡方式。</span>
+                </div>
+            </div>
+            <hr>
+            <div class="contentMargin">
+                <div class="bookingInfo">
+                    <div class="bookingTitle">信用卡付款資訊</div>
+                    <div class="creditCard">
+                        <div><span>卡片號碼：</span><input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" class="input" placeholder="**** **** ****"></div><br>
+                        <div><span>過期時間：</span><input class="input" placeholder="MM / YY"></div><br>
+                        <div><span>驗證密碼：</span><input type="text" class="input" placeholder="CVV"></div><br>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="toBook">
+                <div>
+                    <span>總價：</span>
+                    <span>新台幣 2000 元</span>
+                </div>
+                <button id="bookingBtn">確認訂購並付款</button>
+            </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <my-footer></my-footer>
+</body>
+
+</html>

@@ -36,17 +36,17 @@ BANNER
     border-radius: 8px 0 0 8px;
     outline-style: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .indexSearchButton {
     width: 60px;
-    height: 46px;
+    height: 44px;
     border: none;
     border-radius: 0 8px 8px 0;
     background: #448899;
     align-items: center;
     justify-items: center;
-    cursor: pointer;
 }
 
 #searchCategoryKeyword {

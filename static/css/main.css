@@ -70,6 +70,14 @@ input {
     z-index: 9999;
 }
 
+#to_register,
+#to_login,
+#loginBar,
+#bookingBar,
+#logOut {
+    cursor: pointer;
+}
+
 #loginCard,
 #registerCard {
     position: absolute;
@@ -142,6 +150,7 @@ input {
     height: 47px;
     margin: 0 0 10px 15px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 #to_login,
@@ -174,15 +183,17 @@ HEADER
     max-width: auto;
     background-color: #FFFFFF;
     z-index: 9999;
+    height: 54px;
+    border-bottom: 1px solid rgb(185, 185, 185);
 }
 
 .header-txt {
     display: flex;
     width: 1200px;
-    height: 54px;
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    height: 54px;
 }
 
 .header-txt h2 {
