@@ -156,7 +156,7 @@ main {
     position: relative;
 }
 
-#box-shadow {
+.box-shadow {
     top: 5px;
     width: 22px;
     height: 22px;
@@ -164,7 +164,7 @@ main {
     background-color: white;
 }
 
-#box-shadow:checked {
+.box-shadow:checked {
     border: solid white;
     background-color: #448899;
     width: 22px;

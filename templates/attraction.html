@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/attraction.css">
     <script src="/javascript/attraction.js" defer></script>
+    <script src="/javascript/booking.js" defer></script>
     <script type="module" src="/javascript/common.js"></script>
     <script src="../javascript/user.js" defer></script>
     <title>台北一日遊景點介紹</title>
@@ -32,21 +33,21 @@
                         <h3 id="attr-name"></h3>
                         <span id="attr-category-mrt"></span>
                     </div>
-                    <div class="attr-reserve">
+                    <form class="attr-reserve">
                         <span id="attr-title-txt">訂購導覽行程</span><br>
                         <span>以此景點為中心的一日行程，帶您探索城市角落故事</span><br>
                         <span id="attr-title-txt">選擇日期：</span>
                         <div id="date-time">
-                            <input class="booking-date" type="date" placeholder="yyyy-mm-dd">
+                            <input class="booking-date" type="date" placeholder="yyyy-mm-dd" id="attrDate" required>
                         </div>
                         <br>
                         <span id="attr-title-txt">選擇時間：</span>
                         <label for="box-shadow" class="date-checkbox day">
-                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" checked>
+                            <input type="radio" name="radio" class="custom-radio box-shadow" id="radioDay" checked>
                             上半天
                         </label>
                         <label for="box-shadow" class="date-checkbox afternoon">
-                            <input type="radio" name="radio" class="custom-radio" id="box-shadow" >
+                            <input type="radio" name="radio" class="custom-radio box-shadow" id="radioAfternoon" >
                             下半天
                         </label>
                         <br>
@@ -54,8 +55,8 @@
                         <span id="clickDay">新台幣 2000 元</span>
                         <span id="clickAfternoon">新台幣 2500 元</span>
                         <br>
-                        <button class="btn">開始預約行程</button>
-                    </div>
+                        <button style="cursor: pointer;" id="startBooking">開始預約行程</button>
+                    </form>
                 </div>
             </div>
             <!--Onload block-->

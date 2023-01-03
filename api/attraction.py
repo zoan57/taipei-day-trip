@@ -1,7 +1,9 @@
+import os
 from flask import *
 from mysql.connector import Error
 from mysql.connector import pooling
-from data.EC2MySQL import *
+from dotenv import load_dotenv
+load_dotenv()
 
 attraction=Blueprint("attraction", __name__)
 
@@ -12,8 +14,8 @@ def connection_pool():
                                                   pool_reset_session=True,
                                                   host='localhost',
                                                   database='taipei_day_trip',
-                                                  user=EC2MyUser(),
-                                                  password=EC2MySQLpassword())
+                                                  user=os.getenv('mysqlUsername'),
+                                                  password=os.getenv('mysqlpassword'))
 
     print("Printing connection pool properties ")
     print("Connection Pool Name - ", connection_pool.pool_name)
@@ -31,7 +33,7 @@ def api_get_attractions():
     try:
         cnx= connection_pool()
         cursor = cnx.cursor()
-        image_req="SELECT attractions.id, image FROM attractions INNER JOIN attractions_images ON attractions.id=attractions_images.attraction_id ORDER BY attractions.id"
+        image_req="SELECT attractions.id, attractions_images.image FROM attractions INNER JOIN attractions_images ON attractions.id=attractions_images.attraction_id ORDER BY attractions.id"
         cursor.execute(image_req)
         image_list=cursor.fetchall()
         nextPage= request.args.get('page', 0, type=int)
@@ -41,7 +43,6 @@ def api_get_attractions():
         count=(nextPage-1)*per_rows
         if count < 0:
             count=0
-        print(nextPage)
         kyw= request.args.get('keyword')
         data=[]
         # GET fuzzy search results

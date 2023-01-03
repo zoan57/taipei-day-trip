@@ -1,0 +1,175 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #666666;
+    position: relative;
+}
+
+.contentMargin {
+    margin-left: 110px;
+    margin-bottom: 45px;
+}
+
+.bookingContainer {
+    margin-top: 84px;
+    width: 1200px;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
+    text-align: justify;
+}
+
+.bookingTitle,
+#bookingGreeting h2 {
+    font-size: 19px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    display: inline;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+#bookingGreeting {
+    margin-left: 110px;
+}
+
+.bookingAttr {
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.attrTxt {
+    margin-left: 22px;
+}
+
+.attrImg img {
+    width: 266px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.attrTitle {
+    color: #448899;
+    font-weight: 700;
+}
+
+.attrContent {
+    margin-top: 16px;
+    font-weight: 700;
+    color: #666666;
+    line-height: 36px;
+}
+
+.attrInfo {
+    font-weight: 500;
+}
+
+.bookingInfo {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    margin: 45px 0 15px 0;
+}
+
+.contact,
+.creditCard {
+    font-weight: 500;
+}
+
+.input {
+    width: 200px;
+    height: 38px;
+    border: solid #666 1px;
+    border-radius: 5px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.toBook {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin-top: 43px;
+    padding-right: 110px;
+    align-items: flex-end;
+}
+
+#bookingBtn {
+    all: unset;
+    background-color: #448899;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    text-align: center;
+    width: 173px;
+    height: 35px;
+    margin: 25px 0 32px 0;
+    font-size: 19px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.deleteIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 100px;
+}
+
+#deleteBtn {
+    all: unset;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .bookingContainer {
+        width: 900px;
+    }
+    .toBook {
+        width: 900px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .bookingContainer {
+        margin-top: 84px;
+        width: 340px;
+        margin-bottom: 30px;
+    }
+    .contentMargin {
+        margin-left: 0px;
+    }
+    #bookingGreeting {
+        margin-left: 0;
+    }
+    .bookingAttr {
+        flex-direction: column;
+    }
+    .attrTxt {
+        margin-left: 0;
+        margin-top: 7px;
+    }
+    .attrImg {
+        width: 340px;
+        height: 256px;
+    }
+    .toBook {
+        width: 340px;
+        padding-right: 0;
+    }
+    .deleteIcon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: auto;
+        bottom: -30px;
+        right: 0;
+    }
+}
