@@ -64,9 +64,12 @@ def post_order():
                     order_val=(order_number,user_id,order_info['trip']['attraction']['id'],order_info['trip']['date'],order_info['trip']['time'],order_info['price'],order_info['contact']['name'],order_info['contact']['email'],order_info['contact']['phone'])
                     cursor.execute(order_sql,order_val)
                     cnx.commit()
+                    
+                    #Check the booking page after a successful order
                     check_booking_sql="SELECT userId FROM booking WHERE userId=%s"
                     cursor.execute(check_booking_sql,(user_id,))
                     booking_result=cursor.fetchone()
+                    
                     if booking_result:
                         delete_booking_sql="DELETE FROM booking WHERE userId=%s"
                         cursor.execute(delete_booking_sql,(user_id,))

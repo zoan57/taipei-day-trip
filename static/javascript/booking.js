@@ -178,6 +178,8 @@ window.addEventListener("submit", (e) => {
             alert('輸入的資料無法正確獲取：' + result.msg)
             return
         }
+        const bookingLoading = document.getElementById("bookingLoading");
+        bookingLoading.style.display = "block";
         const bookingAttrId = document.getElementById("bookingAttrId").innerHTML;
         const bookingAttrName = document.getElementById("bookingAttrName").innerHTML;
         const attrImg = document.getElementById("attrImgLink").src;
