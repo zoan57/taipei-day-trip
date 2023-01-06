@@ -45,6 +45,7 @@ def post_order():
                 current_time=now.strftime("%Y%m%d%H%M%S%f")
                 user_id=token['id']
                 order_number=str(current_time)+str(user_id)
+                print(user_id)
                 print(type(order_number))
                 print(order_number)
                 order_json=request.get_json()
@@ -74,7 +75,7 @@ def post_order():
                         delete_booking_sql="DELETE FROM booking WHERE userId=%s"
                         cursor.execute(delete_booking_sql,(user_id,))
                         cnx.commit()
-                    
+                    print(order_json['prime'])
                     url = "https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime"
                     data = {
                         "prime": order_json['prime'],

@@ -128,7 +128,7 @@ function getBookingInfo() {
             if (fetchBookingInfo.data['time'] == 'morning') { bookingTime.textContent = '上午 10 點 到 中午 12 點' } else {
                 bookingTime.textContent = '下午 2點 到 4點'
             };
-            if (fetchBookingInfo.data['price'] == 2000) { bookingPrice.textContent = ' 2000' } else {
+            if (fetchBookingInfo.data['price'] == 2000) { bookingPrice.textContent = '2000' } else {
                 bookingPrice.textContent = '2500'
             };
             const bookingTotalPrice = document.getElementById("bookingTotalPrice");

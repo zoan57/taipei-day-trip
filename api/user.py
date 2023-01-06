@@ -82,7 +82,7 @@ def api_register():
             "message":"伺服器內部錯誤"
             }), 500
     finally:
-        if cnx.is_connected:
+        if cnx.is_connected():
             cursor.close()
             cnx.close() 
 
