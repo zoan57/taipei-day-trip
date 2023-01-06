@@ -89,10 +89,16 @@ next.addEventListener('click', () => {
 document.querySelector('.day').addEventListener("click", () => {
     document.getElementById('clickDay').style.display = 'inline-block';
     document.getElementById('clickAfternoon').style.display = 'none';
+    document.getElementById('radioDay').checked = true;
+    document.getElementById('radioAfternoon').checked = false;
+
+
 });
 document.querySelector('.afternoon').addEventListener("click", () => {
     document.getElementById('clickDay').style.display = 'none';
     document.getElementById('clickAfternoon').style.display = 'inline-block';
+    document.getElementById('radioDay').checked = false;
+    document.getElementById('radioAfternoon').checked = true;
 });
 
 //Insert Calendar Icon for Date on Safari
