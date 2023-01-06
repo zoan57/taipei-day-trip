@@ -10,6 +10,12 @@
     <script src="/javascript/booking.js" defer></script>
     <script type="module" src="/javascript/common.js"></script>
     <script src="/javascript/user.js" defer></script>
+    <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.14.0"></script>
+    <script>
+        // Tap Pay Setting //
+        TPDirect.setupSDK(127056, 'app_kvCK49RyxENBwEcXP6oCFxIshjMSZT2WZt3MO02VDvdttJ5Vf9nqQv7W9Li7', 'sandbox')
+    </script>
+
     <title>確認台北一日遊預定行程</title>
 </head>
 
@@ -32,6 +38,7 @@
                         <div class="attrImg" id="attrImg">
                         </div>
                         <div class="attrTxt">
+                            <span id="bookingAttrId" style="display: none;"></span>
                             <span class="attrTitle">台北一日遊：</span>
                             <span class="attrTitle" id="bookingAttrName"></span>
                             <div class="attrContent">
@@ -42,7 +49,7 @@
                                 <span id="bookingTime" class="attrInfo">早上 9 點到下午 4 點</span>
                                 <br>
                                 <span>費用：</span>
-                                <span id="bookingPrice" class="attrInfo">新台幣 2000 元</span>
+                                <span class="attrInfo">新台幣 <span id="bookingPrice"></span> 元</span>
                                 <br>
                                 <span>地點：</span>
                                 <span id="bookingAddress" class="attrInfo">臺北市 大安區忠孝東路4段</span>
@@ -59,9 +66,20 @@
                     <div class="bookingInfo">
                         <div class="bookingTitle">您的聯絡資訊</div>
                         <div class="contact">
-                            <div><span>聯絡姓名：</span><input type="text" class="input" name="contactName"></div><br>
-                            <div><span>連絡信箱：</span><input type="email" class="input" name="contactEmail"></div><br>
-                            <div><span>手機號碼：</span><input type="text" class="input" name="contactMobile"></div><br>
+                            <div>
+                                <span>聯絡姓名：</span>
+                                <input type="text" name="orderName" class="input" id="orderName" required placeholder="請輸入姓名" maxlength="20">
+                                <span class="validity"></span>
+                            </div><br>
+                            <div>
+                                <span>連絡信箱：</span>
+                                <input type="email" class="input" id="orderEmail" placeholder="example@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="請輸入有效的信箱">
+                                <span class="validity"></span>
+                            </div><br>
+                            <div>
+                                <span>手機號碼：</span><input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" id="orderPhone" class="input" name="orderPhone" placeholder="09xx-xxx-xxx" required>
+                                <span class="validity"></span>
+                            </div><br>
                         </div>
                     </div>
                     <div class="bold">
@@ -72,10 +90,20 @@
                 <div class="contentMargin">
                     <div class="bookingInfo">
                         <div class="bookingTitle">信用卡付款資訊</div>
+                        <!--TapPay Setting as Below-->
                         <div class="creditCard">
-                            <div><span>卡片號碼：</span><input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" class="input" placeholder="**** **** ****"></div><br>
-                            <div><span>過期時間：</span><input class="input" placeholder="MM / YY"></div><br>
-                            <div><span>驗證密碼：</span><input type="text" class="input" placeholder="CVV"></div><br>
+                            <div>
+                                <span>卡片號碼：</span>
+                                <div class="tpfield" id="card-number"></div>
+                            </div><br>
+                            <div>
+                                <span>過期時間：</span>
+                                <div class="tpfield" id="card-expiration-date"></div>
+                            </div><br>
+                            <div>
+                                <span>驗證密碼：</span>
+                                <div class="tpfield" id="card-ccv"></div>
+                            </div><br>
                         </div>
                     </div>
                 </div>

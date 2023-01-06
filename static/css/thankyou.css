@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thankYouCard span,
+.thankYouCard h4 {
+    color: gray;
+    line-height: 30px;
+    display: inline;
+}
+
+h3 {
+    color: #448899;
+}
+
+#cardBox {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.thankYouCard {
+    border: solid lightgray 2px;
+    border-radius: 5px;
+    padding: 0 30px;
+    width: 600px;
+    height: 320px;
+}
+
+.thankYouCard:hover {
+    border: solid darkgray 2px;
+}
+
+.orderCheckFigure {
+    margin-left: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: cover;
+    text-align: center;
+    color: #448899;
+}
+
+.orderCheckFigure img {
+    width: 400px;
+    height: 280px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#orderCheckAttrName {
+    color: gray;
+}
+
+@media (max-width: 1200px) {
+    #cardBox {
+        flex-direction: column;
+        height: 800px;
+        margin-top: 80px;
+    }
+    .orderCheckFigure {
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .thankYouCard {
+        width: 320px;
+        height: 400px;
+    }
+    .orderCheckFigure img {
+        width: 320px;
+        height: 200px;
+    }
+}

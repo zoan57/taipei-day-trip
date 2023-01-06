@@ -77,6 +77,12 @@ input {
     cursor: pointer;
 }
 
+#loginBar,
+#bookingBar,
+#logOut {
+    padding: 0 8px;
+}
+
 #loginCard,
 #registerCard {
     position: absolute;

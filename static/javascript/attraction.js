@@ -10,6 +10,9 @@ const attrImg = document.getElementById('attr-img');
 const attractionAPIUrl = "/api/attraction/" + apiId;
 const displayBox = document.getElementById('clickBox');
 
+let date = new Date().toISOString().split('T')[0];
+let inputDate = document.getElementById("attrDate").setAttribute('min', date);
+
 
 
 //Fetch Attraction data by ID
