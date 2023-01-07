@@ -79,7 +79,11 @@ main {
 .contact,
 .creditCard {
     font-weight: 500;
+    position: relative;
 }
+
+
+/* Input Validation Setting*/
 
 .input {
     width: 200px;
@@ -88,6 +92,30 @@ main {
     border-radius: 5px;
     display: inline-block;
     padding-left: 10px;
+}
+
+input[type="tel"] {
+    margin-left: 5px;
+}
+
+.input:invalid {
+    border: darkred solid 1px;
+}
+
+.input:valid+span::after {
+    position: absolute;
+    content: "✓";
+    padding-left: 10px;
+    margin-top: 5px;
+    color: darkgreen;
+}
+
+.input:invalid {
+    color: orange;
+}
+
+.input:valid {
+    color: darkgreen;
 }
 
 .toBook {
@@ -125,6 +153,64 @@ main {
 #deleteBtn {
     all: unset;
     cursor: pointer;
+}
+
+
+/*Loading Icon*/
+
+#bookingLoading {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.lds-dual-ring:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Tap Pay Setting*/
+
+.tpfield {
+    height: 40px;
+    width: 300px;
+    border: 1px solid gray;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 @media (max-width: 1300px) {

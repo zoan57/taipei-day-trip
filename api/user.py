@@ -82,8 +82,9 @@ def api_register():
             "message":"伺服器內部錯誤"
             }), 500
     finally:
-        cursor.close()
-        cnx.close() 
+        if cnx.is_connected():
+            cursor.close()
+            cnx.close() 
 
 # User Auth, Method=["GET", "PUT", "DELETE"]
 @user.route("/user/auth", methods=["GET", "PUT", "DELETE"])
@@ -119,6 +120,7 @@ def api_auth():
                             'exp' : datetime.now() + timedelta(days=7)
                         }
                         expire_day=datetime.now() + timedelta(days=7)
+                        
                         token=jwt.encode(payload=payload_data, key=SECRET_KEY)
                         resp=make_response(({"ok":True}), 200) 
                         resp.headers["Accept"]="application/json"

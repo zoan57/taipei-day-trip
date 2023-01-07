@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/thankyou.css">
+
+    <script type="module" src="javascript/common.js"></script>
+    <script src="javascript/thankyou.js" defer></script>
+    <script src="javascript/thankyou.js" defer></script>
+    <script src="javascript/user.js" defer></script>
+    <title>感謝您的訂購</title>
+</head>
+
+<body onload="getCheckInfo()">
+    <!-- HEADER -->
+    <my-header></my-header>
+    <main style="flex:1">
+        <div id="cardBox">
+            <div class="thankYouCard">
+                <h3>感謝您的訂購，以下是訂單明細：</h3>
+                <h4 id="orderCheckNumber">訂單編號</h4><br>
+                <br>
+                <span>訂購人：</span>
+                <span id="orderCheckName"></span><br>
+                <span>聯絡電話：</span>
+                <span id="orderCheckPhone"></span><br>
+                <span>聯絡信箱：
+                </span>
+                <span id="orderCheckEmail"></span><br>
+                <span>日期：</span>
+                <span id="orderCheckDate"></span><br>
+                <span>時段：</span>
+                <span id="orderCheckTime"></span><br>
+            </div>
+            <div class="orderCheckFigure">
+                <img src="" alt="暫無圖示" id="orderCheckImg">
+                <figcaption>
+                    <span>台北一日遊行程 </span>
+                    <span id="orderCheckAttrName">大稻埕碼頭</span>
+                </figcaption>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- FOOTER -->
+    <my-footer></my-footer>
+</body>
+
+</html>

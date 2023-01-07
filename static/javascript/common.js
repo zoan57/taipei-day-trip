@@ -59,6 +59,7 @@ const bookingBar = document.getElementById("bookingBar");
 
 loginBar.addEventListener("click", () => {
     login.style.display = "block";
+    console.log(date);
 })
 to_register.addEventListener("click", () => {
     login.style.display = "none";

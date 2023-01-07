@@ -2,6 +2,8 @@ from flask import Blueprint, Flask, render_template, request,jsonify
 from api.attraction import attraction
 from api.user import user
 from api.booking import booking
+from api.order import order
+
 
 app= Flask (__name__, static_folder="static", static_url_path="/")
 app.secret_key="try it"
@@ -10,6 +12,9 @@ app.config["TEMPLATES_AUTO_RELOAD"]=True
 app.register_blueprint(attraction, url_prefix="/api")
 app.register_blueprint(user, url_prefix="/api")
 app.register_blueprint(booking, url_prefix="/api")
+app.register_blueprint(order, url_prefix="/api")
+
+
 
            
 # Pages
