@@ -19,7 +19,7 @@ function checkLoginStatus() {
 };
 //Process a booking
 const startBooking = document.getElementById("startBooking");
-window.addEventListener("submit", (e) => {
+document.addEventListener("submit", (e) => {
     e.preventDefault();
     // Check Login Status, if not, ask for login first.
     async function check_and_book() {
@@ -48,7 +48,7 @@ window.addEventListener("submit", (e) => {
                 attrTime = 'afternoon';
                 attrPrice = 2500
             };
-            const addBooking = {
+            let addBooking = {
                 "attractionId": attrId,
                 "date": attrDate,
                 "time": attrTime,
@@ -93,18 +93,8 @@ function getBookingInfo() {
             const bookingWelcomeName = document.getElementById("bookingWelcomeName");
             bookingWelcomeName.textContent = userCheck.data['name'];
         }
-        if (fetchBookingInfo.data == null) {
-            addUserName();
-            const addOrder = document.getElementById("addOrder");
-            const bookingGReeting = document.getElementById("bookingGreeting");
-            const footer = document.getElementById("footer");
-            const noneBookingWarning = document.createElement('span');
-            noneBookingWarning.textContent = "目前沒有任何待預訂的行程";
-            bookingGReeting.appendChild(noneBookingWarning);
-            addOrder.remove();
-            footer.classList.add("noneBookingFooter");
-        } else {
-            // Get User name
+        await fetchBookingInfo.data;
+        if (fetchBookingInfo.data != null) {
             addUserName();
             const bookingAttrId = document.getElementById("bookingAttrId");
             const bookingAttrName = document.getElementById("bookingAttrName");
@@ -138,6 +128,17 @@ function getBookingInfo() {
 
             bookingAddress.textContent = fetchBookingInfo.data['attraction']['address'];
 
+        } else {
+            // Get User name
+            addUserName();
+            const addOrder = document.getElementById("addOrder");
+            const bookingGReeting = document.getElementById("bookingGreeting");
+            const footer = document.getElementById("footer");
+            const noneBookingWarning = document.createElement('span');
+            noneBookingWarning.textContent = "目前沒有任何待預訂的行程";
+            bookingGReeting.appendChild(noneBookingWarning);
+            addOrder.remove();
+            footer.classList.add("noneBookingFooter");
         };
     }
     fetchGetBooking();

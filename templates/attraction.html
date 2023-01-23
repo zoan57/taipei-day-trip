@@ -10,7 +10,6 @@
     <script src="/javascript/attraction.js" defer></script>
     <script src="/javascript/booking.js" defer></script>
     <script type="module" src="/javascript/common.js"></script>
-    <script src="../javascript/user.js" defer></script>
     <title>台北一日遊景點介紹</title>
 </head>
 
@@ -33,7 +32,7 @@
                         <h3 id="attr-name"></h3>
                         <span id="attr-category-mrt"></span>
                     </div>
-                    <form class="attr-reserve">
+                    <form class="attr-reserve" method="post">
                         <span id="attr-title-txt">訂購導覽行程</span><br>
                         <span>以此景點為中心的一日行程，帶您探索城市角落故事</span><br>
                         <span id="attr-title-txt">選擇日期：</span>
@@ -80,6 +79,8 @@
     </main>
     <!-- FOOTER -->
     <my-footer></my-footer>
+    <script src="../javascript/user.js" defer></script>
+
 </body>
 
 </html>

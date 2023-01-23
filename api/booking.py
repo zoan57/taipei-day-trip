@@ -51,8 +51,10 @@ def api_booking():
                     price=booking['price']
                     print(userId)
                     if attractionId==None or date==None or time=="" or price==0:
+                        print("It's wrong!建立失敗，輸入不正確或其他原因")
                         return {"error":True,"message":"建立失敗，輸入不正確或其他原因"},403
                     if not booking:
+                        print("It's wrong!API取得失敗")
                         return jsonify({
                         "error":True,
                         "message":"請輸入資料"
@@ -75,6 +77,7 @@ def api_booking():
                         "message":"未登入系統，拒絕存取"
                         }), 403
             except Exception as e:
+                print("So Wrong")
                 return jsonify({
                     "error":True,
                     "message":"伺服器內部錯誤"
